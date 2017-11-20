@@ -1,0 +1,82 @@
+.img-fluid{
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.carousel{
+  background: #343a40;
+}
+
+.carousel-indicators{
+  margin-right: 36%;
+  margin-left: 36%;
+}
+
+.carousel-control-prev{
+  top: unset;
+  bottom: 10px;
+  left: 31%;
+  width: 5%;
+}
+
+.carousel-control-prev-icon{
+  width: 35px;
+  height: 35px;
+  background: transparent no-repeat 3px center;
+  background-size: 75% 75%;
+  background-color: #000;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  border-radius: 50px;
+}
+
+.carousel-control-next{
+  top: unset;
+  bottom: 10px;
+  right: 31%;
+  width: 5%;
+}
+
+.carousel-control-next-icon{
+  width: 35px;
+  height: 35px;
+  background: transparent no-repeat 6px center;
+  background-size: 75% 75%;
+  background-color: #000;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  border-radius: 50px;
+}
+
+.toolbar{
+  position: fixed;
+  bottom: -12.4%;
+  right: 1%;
+  padding: 10px 4px 2px;
+  background: #343a40;
+  border: 1px solid #fff;
+  border-radius: 10px 10px 0 0;
+  transition: all .3s;
+}
+
+.toolbar:hover{
+  bottom: -2.5%;
+}
+
+.toolbar a{
+  color: #ddd;
+  opacity: .5;
+}
+
+.toolbar a:hover{
+  opacity: 1;
+  text-decoration: none;
+}
+
+.my-logo{
+  border-right: 2px solid #fff;
+  transition: all .3s;
+}
+
+.my-logo:hover{
+  opacity: .7;
+  border-right: 20px solid #aaa;
+}
