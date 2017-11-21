@@ -1,10 +1,10 @@
-.img-fluid{
-  max-width: 75%;
-  margin: 0 auto;
-}
-
 .carousel{
   background: #343a40;
+}
+
+.carousel .img-fluid{
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 .carousel-indicators{

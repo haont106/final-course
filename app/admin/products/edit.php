@@ -10,10 +10,12 @@
   $sql = "select * from products where id=$id";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
+  $user_id = $row["user_id"];
   $catalog_id = $row["catalog_id"];
   $name = $row["name"];
   $description = $row["description"];
   $image = $row["image"];
+  $img2 = $row["img2"];
   $qty = $row["qty"];
   $price = $row["price"];
 ?>
@@ -44,6 +46,10 @@
         <input class="form-control" type="text" name="image" value="<?php echo $image; ?>">
       </div>
       <div class="row">
+        <label>Banner:</label>
+        <input class="form-control" type="text" name="img2" value="<?php echo $img2; ?>">
+      </div>
+      <div class="row">
         <label>Mô tả:</label>
         <textarea class="form-control" name="description"><?php echo $description; ?></textarea>
       </div>      
@@ -54,7 +60,21 @@
       <div class="row">
         <label>Giá:</label>
         <input class="form-control" type="text" name="price" value="<?php echo $price; ?>">
-      </div>          
+      </div>
+      <div class="row">
+        <label>User:</label>
+        <select class="form-control" name="user_id">
+          <?php
+            $sql = "select * from users";
+            $result = $conn->query($sql);
+            if($result->num_rows > 0){
+              while($row = $result->fetch_assoc()){ ?>
+                  <option <?php if($user_id == $row['id']) echo 'selected=true'; ?> value="<?php echo $row['id']; ?>"><?php echo $row["name"]; ?></option>
+          <?php    }
+            }
+          ?>
+        </select>
+      </div>
       <div class="row">
         <label>Danh mục:</label>
         <select class="form-control" name="catalog_id">
@@ -71,8 +91,8 @@
       </div>
       <br>
       <div class="row">
-        <button class="btn btn-primary">Đồng ý</button>
-        <a class="btn btn-secondary ml-3" href="index.php" role="button">Trở về</a>
+        <button class="btn btn-primary mb-3">Đồng ý</button>
+        <a class="btn btn-secondary mb-3 ml-3" href="index.php" role="button">Trở về</a>
       </div>
     </form>
   </div>

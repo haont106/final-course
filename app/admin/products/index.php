@@ -21,6 +21,7 @@
         <th>Catalog ID</th>
         <th>Tên</th>
         <th>Ảnh</th>
+        <th>Banner</th>
         <th>Mô tả</th>
         <th>SL</th>
         <th>Giá</th>
@@ -40,6 +41,7 @@
           <td><?php echo $row['catalog_id']; ?></td>
           <td><?php echo $row['name']; ?></td>
           <td><?php echo $row['image']; ?></td>
+          <td><?php echo $row['img2']; ?></td>
           <td><?php echo $row['description']; ?></td>
           <td><?php echo $row['qty']; ?></td>
           <td><?php echo $row['price']; ?></td>

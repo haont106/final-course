@@ -16,9 +16,9 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <?php 
-      for ($i=1;$i<=6;$i++)
+      for ($i=0;$i<=6;$i++)
       {
-        if ($i==1)
+        if ($i==0)
         {
           echo '<div class="carousel-item active"><img class="d-block img-fluid" src="../public/uploads/banner'.$i.'.jpg"></div>';
         }

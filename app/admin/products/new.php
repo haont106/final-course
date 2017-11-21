@@ -26,6 +26,10 @@
         <input class="form-control"  type="text" name="image">
       </div>
       <div class="row">
+        <label>Banner:</label>
+        <input class="form-control"  type="text" name="img2">
+      </div>
+      <div class="row">
         <label>Mô tả:</label>
         <textarea class="form-control" name="description"></textarea>
       </div>
@@ -36,6 +40,20 @@
       <div class="row">
         <label>Giá:</label>
         <input class="form-control"  type="text" name="price">
+      </div>
+      <div class="row">
+        <label>User:</label>
+        <select class="form-control" name="user_id">
+          <?php
+            $sql = "select * from users";
+            $result = $conn->query($sql);
+            if($result->num_rows > 0){
+              while($row = $result->fetch_assoc()){ ?>
+                  <option value="<?php echo $row['id']; ?>"><?php echo $row["name"]; ?></option>
+          <?php    }
+            }
+          ?>
+        </select>
       </div>
       <div class="row">
         <label>Danh mục:</label>
@@ -53,8 +71,8 @@
       </div>
       <br>
       <div class="row">
-        <button class="btn btn-primary">Đồng ý</button>
-        <a class="btn btn-secondary ml-3" href="index.php" role="button">Trở về</a>
+        <button class="btn btn-primary mb-3">Đồng ý</button>
+        <a class="btn btn-secondary mb-3 ml-3" href="index.php" role="button">Trở về</a>
       </div>
     </form>
   </div>

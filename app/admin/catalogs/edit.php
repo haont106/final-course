@@ -36,7 +36,7 @@
       </div>
       <div class="row">
         <label>Mô tả:</label>
-        <textarea class="form-control" name="description" placeholder="<?php echo $description; ?>"></textarea>
+        <textarea class="form-control" name="description"><?php echo $description; ?></textarea>
       </div>
       <br>
       <div class="row">

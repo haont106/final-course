@@ -26,8 +26,8 @@
                 $result = $conn->query($sql);
                 if($result->num_rows > 0){
                 $row = $result->fetch_assoc(); ?>
-                <div class="card mt-4">
-                    <img class="card-img-top img-fluid" src="<?php echo URL_IMAGE.$row['image'];?>" alt="" width="50% !important">
+                <div class="card mb-4">
+                    <img class="card-img-top img-fluid" src="<?php echo URL_IMAGE.$row['img2'];?>" alt="" width="50% !important">
                     <div class="card-body">
                       <h3 class="card-title"><?php echo $row["name"]; ?></h3>
                       <h4>$<?php echo $row["price"]; ?></h4>

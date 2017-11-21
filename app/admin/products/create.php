@@ -2,21 +2,22 @@
 <?php require_once "../../../db/mysql.php"; ?>
 <?php require_once "../../helper/products-helper.php"; ?>
 <?php
-  if(isset($_POST["catalog_id"]) && isset($_POST["name"])
+  if(isset($_POST["user_id"]) && isset($_POST["catalog_id"]) && isset($_POST["name"])
     && isset($_POST["image"]) && isset($_POST["description"])
     && isset($_POST["qty"]) && isset($_POST["price"])){
-    $user_id = 1;
+    $user_id = $_POST["user_id"];
     $catalog_id = $_POST["catalog_id"];
     $name = $_POST["name"];
     $image = $_POST["image"];
+    $img2 = $_POST["img2"];
     $description = $_POST["description"];
     $qty = $_POST["qty"];
     $price = $_POST["price"];
 
 
     if(validate($name, $description)){
-      $sql = "insert into products(user_id,catalog_id,name,image,description,qty,price) 
-      values($user_id,$catalog_id,'$name','$image','$description',$qty,$price)";
+      $sql = "insert into products(user_id,catalog_id,name,image,img2,description,qty,price) 
+      values($user_id,$catalog_id,'$name','$image','$img2','$description',$qty,$price)";
       $result = $conn->query($sql);
       if($result){
         $_SESSION["flash"] = "New record added success";
