@@ -71,6 +71,30 @@
   text-decoration: none;
 }
 
+.mytop{
+  background: #22c5a8;
+}
+
+.mytop li a{
+  color: #fff !important;
+  opacity: .7;
+  transition: all .3s;
+  border: 1px solid #22c5a8;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 7px 10px !important;
+}
+
+.mytop li:nth-child(1) a{
+  opacity: 1 !important;
+  border: 1px solid #fff;
+}
+
+.mytop li:hover a{
+  opacity: .9;
+  border: 1px solid #fff;
+}
+
 .my-logo{
   border-right: 2px solid #fff;
   transition: all .3s;
@@ -78,5 +102,29 @@
 
 .my-logo:hover{
   opacity: .7;
-  border-right: 20px solid #aaa;
+  border-right: 20px solid #ddd;
+}
+
+.mymenuhead{
+  
+  font-style: bold;
+  color: #fff;
+  background: #22c5a8;
+}
+
+.mymenuhead:hover{
+  color: #fff;
+}
+
+.mymenu{
+  transition: all .2s;
+}
+
+.mymenu:hover{
+  color: #fff;
+  background: #22c5a8;
+}
+
+.myfoot{
+  background: #22c5a8;
 }

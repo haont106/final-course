@@ -16,7 +16,7 @@
       <div class="row">
         <?php include "slide-left.php"; ?>
         <!-- /.col-lg-3 -->
-        <div class="col-lg-9">
+        <div class="col-lg-10">
           <?php include "slide.php"; ?>          
           <div class="row">
             <?php
@@ -44,7 +44,7 @@
                   </div>
                   <?php  }
                 }else{
-                  echo "<h1>Emty</h1>";
+                  echo "<h1 class='mx-5 my-5'>Emty products</h1><h1 class='mx-5 my-5'>Emty products</h1><h1 class='mx-5 my-5'>Emty products</h1><h1 class='mx-5 my-5'>Emty products</h1>";
                 }
               }
             ?>

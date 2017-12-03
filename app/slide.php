@@ -1,7 +1,7 @@
 <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
   <ol class="carousel-indicators">
     <?php 
-      for ($i=0;$i<6;$i++)
+      for ($i=0;$i<10;$i++)
       {
         if ($i==0)
         {
@@ -16,7 +16,7 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <?php 
-      for ($i=0;$i<=6;$i++)
+      for ($i=0;$i<10;$i++)
       {
         if ($i==0)
         {

@@ -16,7 +16,7 @@
       <div class="row">
         <?php include "slide-left.php"; ?>
         <!-- /.col-lg-3 -->
-        <div class="col-lg-9">
+        <div class="col-lg-10">
           <?php include "slide.php"; ?>
           <div class="row">
             <?php 
@@ -26,7 +26,7 @@
                 $result = $conn->query($sql);
                 if($result->num_rows > 0){
                 $row = $result->fetch_assoc(); ?>
-                <div class="card mb-4">
+                <div class="card mb-4 text-center">
                     <img class="card-img-top img-fluid" src="<?php echo URL_IMAGE.$row['img2'];?>" alt="" width="50% !important">
                     <div class="card-body">
                       <h3 class="card-title"><?php echo $row["name"]; ?></h3>

@@ -8,6 +8,7 @@
     <meta charset="utf-8">
 </head>
 <body>
+  <?php include "../../menucon.php" ?>
   <div class="container">
   <div class="row">
     <a class="btn btn-success m-2" href="new.php" role="button">Tạo mới</a>
@@ -19,6 +20,8 @@
         <th>ID</th>
         <th>Tên</th>
         <th>Mô tả</th>
+        <th>#</th>
+        <th>#</th>
       </tr>
     </thead>
     <tbody>
@@ -40,5 +43,8 @@
     </tbody>
   </table>
 </div>
+<script src="../../../public/js/jquery.min.js"></script>
+<script src="../../../public/js/bootstrap.min.js"></script>
+<script src="../../../public/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

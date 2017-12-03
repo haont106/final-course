@@ -7,6 +7,12 @@
 <html lang="en">
   <head>
     <?php include "lib.php"; ?>
+    <style type="text/css">
+      .mytop li:nth-child(1) a{
+        opacity: 1 !important;
+        border: 1px solid #fff;
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -16,7 +22,7 @@
       <div class="row">
         <?php include "slide-left.php"; ?>
         <!-- /.col-lg-3 -->
-        <div class="col-lg-9">
+        <div class="col-lg-10">
           <?php include "slide.php"; ?>
           <div class="row">
             <?php
@@ -25,7 +31,7 @@
                 if($result->num_rows > 0)
                 {
                   while($row = $result->fetch_assoc()) {?>
-                  <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-100">
                       <a href="single.php?product_id=<?php echo $row["id"]?>"><img class="card-img-top" src="<?php echo URL_IMAGE.$row['image'];?>" alt=""></a>
                       <div class="card-body">
