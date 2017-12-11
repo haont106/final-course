@@ -35,9 +35,11 @@
           <?php include "slide.php"; ?>
           <div class="row">            
           	<form method="post" action="login-action.php" class="text-center col-lg-12">
-			        <h1 class="form-signin-heading text-muted" style="font-size: 80px">Đăng nhập</h1>
-			        <input type="text" name="email" class="form-control text-center" placeholder="Email address" required="" autofocus=""><br>
-			        <input type="password" name="password" class="form-control text-center" placeholder="Password" required=""><br>
+			        <h1 class="form-signin-heading text-muted" style="font-size: 80px">Đăng nhập</h1><br>
+              <h2>Email:</h2>
+			        <input type="text" name="email" class="form-control text-center" placeholder="Nhập địa chỉ email" required="" autofocus=""><br>
+              <h2>Mật khẩu:</h2>
+			        <input type="password" name="password" class="form-control text-center" placeholder="Nhập mật khẩu" required=""><br>
 			        <button class="btn btn-lg btn-primary btn-block" type="submit">
 			            Sign In
 			        </button><br>
