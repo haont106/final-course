@@ -1,5 +1,5 @@
+<?php session_start(); ?>
 <?php require_once "../../../db/mysql.php"; ?>
-<?php require_once "../../check-login.php"; ?>
 <?php
   if(!isset($_GET["id"])){
     $_SESSION["flash"] = "Wrong params";
@@ -7,12 +7,13 @@
   }
 
   $id = $_GET["id"];
-  $sql = "select * from users where id='$id'";
+  $sql = "select * from msg where id='$id'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
   $name = $row["name"];
+  $sdt = $row["sdt"];
   $email = $row["email"];
-  $role = $row["role"];
+  $msg = $row["msg"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,11 +44,7 @@
       </div>
       <div class="row">
         <label>Mật khẩu:</label>
-        <input class="form-control"  type="password" name="password">
-      </div>
-      <div class="row">
-        <label>Lặp lại mật khẩu:</label>
-        <input class="form-control"  type="password" name="repassword">
+        <input class="form-control"  type="password" name="password" value="<?php echo $email; ?>">
       </div>
       <div class="row">
         <label>Quyền:</label>

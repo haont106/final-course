@@ -1,4 +1,5 @@
 <?php require_once "../../../db/mysql.php"; ?>
+<?php require_once "../../check-login.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +19,9 @@
     <thead>
       <tr>
         <th>ID</th>
-        <th>User ID</th>
-        <th>Catalog ID</th>
         <th>Tên</th>
+        <th>User</th>
+        <th>Danh mục</th>
         <th>Ảnh</th>
         <th>Banner</th>
         <th>Mô tả</th>
@@ -38,9 +39,41 @@
       while ($row = $result->fetch_assoc()) { ?>
         <tr>
           <td><?php echo $row['id']; ?></td>
-          <td><?php echo $row['user_id']; ?></td>
-          <td><?php echo $row['catalog_id']; ?></td>
           <td><?php echo $row['name']; ?></td>
+          <td><?php switch ($row['user_id']) {
+            case 2:
+              echo "User 02";
+              break;
+            case 3:
+              echo "User 03";
+              break;
+            case 4:
+              echo "User 04";
+              break;
+            case 5:
+              echo "admin";
+              break;
+          }; ?>
+          <td><?php switch ($row['catalog_id']) {
+            case 1:
+              echo "Huyền thoại";
+              break;
+            case 2:
+              echo "Sử thi";
+              break;
+            case 3:
+              echo "Siêu phẩm";
+              break;
+            case 4:
+              echo "Giả lập";
+              break;
+            case 5:
+              echo "Apple";
+              break;
+            case 6:
+              echo "Samsung";
+              break;
+          }; ?>
           <td><?php echo $row['image']; ?></td>
           <td><?php echo $row['img2']; ?></td>
           <td><?php echo $row['description']; ?></td>

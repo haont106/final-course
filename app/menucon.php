@@ -3,7 +3,7 @@
 ?>   
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand my-logo pr-2" href="index.php">Admin Zone</a>
+    <a class="navbar-brand my-logo pr-2" href="../../index.php">HaiVoL Shop</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,12 +30,18 @@
             <a class="dropdown-item" href="<?php echo URL_ADMIN; ?>catalogs/new.php">Thêm mới Catalogs</a>
           </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Msg</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="<?php echo URL_ADMIN; ?>msg/index.php">Danh sách tin nhắn</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item">
           <a class="nav-link" href="../../index.php">Shop</a>
-        </li>
-        <li class="nav-item">
+        </li> -->
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">Log out</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>

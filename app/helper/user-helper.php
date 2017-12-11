@@ -1,7 +1,7 @@
 <?php
-  function validate($email,$password){
-    if(trim($email) == "" || trim($password) == ""){
-      $_SESSION["flash"] = "Email or Password can not empty";
+  function validate($name,$email,$password){
+    if(trim($name) == "" || trim($email) == "" || trim($password) == ""){
+      $_SESSION["flash"] = "Name, Email or Password can not empty";
       return false;
     }
     $sql = "select * from users where email='$email'";

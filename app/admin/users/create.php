@@ -9,7 +9,7 @@
     $password = $_POST["password"];
     $role = $_POST["role"];
 
-    if(validate($email, $password)){
+    if(validate($name, $email, $password)){
       $sql = "insert into users(name,email,password,role) values('$name','$email','$password',$role)";
       $result = $conn->query($sql);
       if($result){

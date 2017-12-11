@@ -8,21 +8,22 @@
   <head>
     <?php include "lib.php"; ?>
     <style type="text/css">
-      .mytop li:nth-child(1) a{
+      .mytop li:nth-child(1) .mya{
         opacity: .7 !important;
         border: 1px solid #22c5a8;
       }
-      .mytop li:nth-child(1):hover a{
+      .mytop li:nth-child(1):hover .mya{
         opacity: .9 !important;
         border: 1px solid #fff;
       }
-      .mytop li:nth-child(4) a{
+      .mytop li:nth-child(4) .mya{
         opacity: 1 !important;
         border: 1px solid #fff;
       }
     </style>
   </head>
   <body>
+    <?php if(isset($_SESSION["flash"])) echo $_SESSION["flash"]; ?>
     <!-- Navigation -->
     <?php include "menu.php"; ?>
     <!-- Page Content -->
@@ -34,9 +35,6 @@
           <?php include "slide.php"; ?>
           <div class="row">
             <form method="post" action="admin/msg/create.php" class="col-lg-12">
-              <div class="row">
-                <i class="flash"><?php if(isset($_SESSION["flash"])) echo $_SESSION["flash"]; ?></i>
-              </div>
               <div>
                 <h1>Gửi tin nhắn để liên hệ</h1>
               </div>
@@ -59,21 +57,22 @@
               <div class="row mt-2">
                 <div class="col-lg-12">
                   <label>Tin nhắn:</label>
-                  <textarea class="form-control" name="description" rows="6"></textarea>
+                  <textarea class="form-control" name="msg" rows="6"></textarea>
                 </div>
               </div>
-              <div class="row mt-2 ml-1">
+              <!-- <div class="row mt-2 ml-1">
                 <div class="col-lg-12">
                   <input type="checkbox" name="20GG" value="OK"> Tôi đồng ý chấp thuận các <a href="#">điều khoản</a> khi gửi tin nhắn
                 </div>
-              </div>
+              </div> -->
               <br>
               <div class="row">
                 <div class="col-lg-12">
                   <button class="btn btn-success col-lg-12">Đồng ý và gửi đi</button>
                 </div>
               </div>
-            </form>
+              
+            </form>              
           </div>
           <!-- /.row -->
         </div>
@@ -91,3 +90,4 @@
     <script src="../public/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+<?php unset($_SESSION["flash"]); ?>

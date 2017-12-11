@@ -8,15 +8,15 @@
   <head>
     <?php include "lib.php"; ?>
     <style type="text/css">
-      .mytop li:nth-child(1) a{
+      .mytop li:nth-child(1) .mya{
         opacity: .7 !important;
         border: 1px solid #22c5a8;
       }
-      .mytop li:nth-child(1):hover a{
+      .mytop li:nth-child(1):hover .mya{
         opacity: .9 !important;
         border: 1px solid #fff;
       }
-      .mytop li:nth-child(2) a{
+      .mytop li:nth-child(2) .mya{
         opacity: 1 !important;
         border: 1px solid #fff;
       }

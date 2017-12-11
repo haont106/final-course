@@ -1,4 +1,5 @@
 <?php require_once "../../../db/mysql.php"; ?>
+<?php require_once "../../check-login.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +21,7 @@
         <th>ID</th>
         <th>Tên</th>
         <th>Email</th>
+        <th>Pass</th>
         <th>Quyền</th>
         <th>#</th>
         <th>#</th>
@@ -35,6 +37,7 @@
           <td><?php echo $row['id']; ?></td>
           <td><?php echo $row['name']; ?></td>
           <td><?php echo $row['email']; ?></td>
+          <td><?php echo $row['password']; ?></td>
           <td><?php switch ($row['role']) {
             case 0:
               echo "Admin";
@@ -45,7 +48,7 @@
             case 2:
               echo "User";
               break;
-          }; ?>            
+          }; ?>
           </td>
           <td><a href="Edit.php?id=<?php echo $row["id"];?>">Sửa</a></td>
           <td><a href="delete.php?id=<?php echo $row["id"];?>">Xóa</a></td>
